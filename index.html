@@ -1,0 +1,106 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>아파트 창틀 실리콘 코킹 예상 비용 가이드</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="title">아파트 창틀 실리콘 코킹 예상 비용 가이드</div>
+      <div class="sub">
+        상담 전 참고용 가격 가이드입니다. 정확한 시공 가능 여부 및 금액은 사진 확인 후 결정되며, 현장 상황에 따라 시공이 어려울 수 있습니다.
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="progress">
+        <div class="progress__label">
+          <span id="stepLabel">1 / 8</span>
+          <button id="resetBtn" class="link" type="button">처음부터</button>
+        </div>
+        <div class="progress__bar"><div id="progressFill" class="progress__fill"></div></div>
+      </div>
+
+      <h2 id="qTitle" class="qTitle">질문</h2>
+      <p id="qHint" class="qHint"></p>
+
+      <div id="options" class="options"></div>
+
+      <div class="nav">
+        <button id="prevBtn" class="btn btn--ghost" type="button">이전</button>
+        <button id="nextBtn" class="btn" type="button" disabled>다음</button>
+      </div>
+
+      <div id="guardBox" class="guard" hidden></div>
+    </section>
+
+    <section class="card summary">
+      <div class="summary__head">
+        <div class="summary__title">선택 요약</div>
+        <div id="summaryMini" class="summary__mini">아직 선택 전</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="priceBox">
+        <div class="priceBox__row">
+          <div class="muted">평형 기준 금액(가이드)</div>
+          <div id="basePrice" class="price">-</div>
+        </div>
+        <div class="priceBox__row">
+          <div class="muted">추가 작업 가능성</div>
+          <div id="addNote" class="mutedRight">-</div>
+        </div>
+        <div class="priceBox__row">
+          <div class="muted">예상 범위(참고)</div>
+          <div id="rangePrice" class="price price--range">-</div>
+        </div>
+        <div class="fineprint">
+          ※ 최종 금액/시공 여부는 사진 확인 후 안내됩니다. 예상 견적이 나왔다고 해서 반드시 시공을 약속드리지는 않습니다.
+        </div>
+      </div>
+
+      <div class="ctaRow">
+        <button id="copyBtn" class="btn btn--ghost" type="button">상담 예시 복사</button>
+        <a id="kakaoBtn" class="btn" href="#" target="_blank" rel="noopener">사진 보내기</a>
+      </div>
+
+      <details class="details">
+        <summary>시공 방식 안내</summary>
+        <div class="details__body">
+          본 시공은 외벽 로프 작업으로만 진행됩니다.<br/>
+          - 덧방 시공은 진행하지 않습니다.<br/>
+          - 그라인더 기계 연마 방식은 사용하지 않습니다.<br/><br/>
+          수공구 기준<br/>
+          ▶ 99% 올제거 + 80% 제거 혼합 방식으로 피착면 정리를 우선하며,<br/>
+          예상 수명은 약 7 ~ 10년입니다.
+        </div>
+      </details>
+
+      <details class="details">
+        <summary>개별 시공 항목(선택)</summary>
+        <div class="details__body">
+          - 크랙 보수 : 40 ~ 70만원<br/>
+          - 거실창 단독 : 35 ~ 40만원<br/>
+          - 안방창 단독 : 30 ~ 35만원<br/>
+          - 작은방 창 : 25 ~ 30만원
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span class="muted">
+      © 예상 비용 가이드 · 모바일 최적화
+    </span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
