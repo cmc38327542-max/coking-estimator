@@ -281,8 +281,23 @@
     const W = (n) => new Intl.NumberFormat("ko-KR").format(n) + "원";
 
     // ✅ 여기만 네 카톡 채널 링크로 바꾸면 됨 (예: https://pf.kakao.com/_xlCxixon/chat)
-    const KAKAO_CHAT_URL = "https://pf.kakao.com/";
-    document.getElementById("kakaoBtn").href = KAKAO_CHAT_URL;
+    const KAKAO_CHAT_URL = "https://pf.kakao.com/_xlCxixon/chat";
+
+document.getElementById("kakaoBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const appLink = "kakaotalk://pf/chat?channelPublicId=_xlCxixon";
+  const webLink = "https://pf.kakao.com/_xlCxixon/chat";
+
+  // 앱 먼저 시도
+  location.href = appLink;
+
+  // 앱이 없으면 1초 후 웹으로
+  setTimeout(() => {
+    location.href = webLink;
+  }, 800);
+});
+
 
     const areaTable = [
       { label: "25평대", area: 25, per: 25000, total: 625000 },
